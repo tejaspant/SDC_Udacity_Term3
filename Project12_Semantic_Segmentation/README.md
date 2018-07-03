@@ -19,7 +19,8 @@ Tensorflow API has been used to implement the FCN-8 architecture.
 [image4]: ./write_up_images/umm_000007.png "Image 4"
 [image5]: ./write_up_images/uu_000042.png "Image 5"
 
-## Model Training Details:
+## Model Setup and Hyperparameters:
+---
 * Tranposed Convolution Kernel Initializer = Truncated Normal Initializer with Standard Deviation = 0.01
 * Tranposed Convolution Kernel Regularizer = Truncated Normal Initializer with Weight = 0.001
 * Number of Epochs = 6
