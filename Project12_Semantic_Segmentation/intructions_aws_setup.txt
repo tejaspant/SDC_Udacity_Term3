@@ -1,0 +1,37 @@
+SETUP AWS INSTANCE:
+
+Log in to EC2 management console, region Ohio
+Instances -> spot requests -> Request Spot Instances
+Search for AMI -> Communiti AMI -> udacity-carnd-advanced-deep-learning - ami-854464e0
+Instances type(s) select -> g3.4xlarge
+Network default
+Next
+EBS volumes -> Delete: uncheck mark (important: storing the data when instance is terminated will be charged additionally)
+Key pair name -> create new key pair -> update -> choose
+Security group -> create new -> add SSH and custom TCP for port 8888
+Review -> Launch
+Instances -> when Instance State = Running -> right click -> Connect
+Follow instructions for Putty
+
+CONVERT PRIVATE KEY PUTTY
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html
+
+RUN PUTTY:
+In the Host Name box, enter ubuntu@public_dns_name. Be sure to specify the appropriate user name for your AMI. For example:
+In the Category pane, expand Connection, expand SSH, and then choose Auth. Complete the following:
+Choose Browse.
+Select the .ppk file that you generated for your key pair, and then choose Open.
+(Optional) If you plan to start this session again later, you can save the session information for future use. Choose Session in the Category tree, enter a name for the session in Saved Sessions, and then choose Save.
+Choose Open to start the PuTTY session.
+
+SCRIPT TO GET DATA ON AWS INTANCE:
+#!/bin/bash
+cd data
+wget https://s3-us-west-1.amazonaws.com/udacity-selfdrivingcar/vgg.zip
+unzip vgg.zip
+rm vgg.zip
+wget http://kitti.is.tue.mpg.de/kitti/data_road.zip
+unzip data_road.zip
+rm data_road.zip
+pip install tqdm
+
