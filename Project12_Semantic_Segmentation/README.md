@@ -33,7 +33,8 @@ The model has been trained on Amazon Web Services (AWS) EC2 using the g3.4xlarge
 
 ## Result
 ---
-Using the Kernel initializer and regularizer for the transpose convolution significantly improves the prediction of the road pixels. After around 6 epochs the loss was around 0.02. Increasing the number of epochs beyond led to overfitting of the data. 
+Using the Kernel initializer and regularizer for the transpose convolution significantly improves the prediction of the road pixels. After 6 epochs the cross-entropy loss was around 0.02. Increasing the number of epochs beyond 6 led to fluctuation of the cross-entropy loss indicating overfitting of the data. 
+
 Here are some of the sample predictions from the test data set:
 ![alt text][image1]
 ![alt text][image2]
