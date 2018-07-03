@@ -21,13 +21,15 @@ Tensorflow API has been used to implement the FCN-8 architecture.
 
 ## Model Setup and Hyperparameters:
 ---
-* Tranposed Convolution Kernel Initializer = Truncated Normal Initializer with Standard Deviation = 0.01
-* Tranposed Convolution Kernel Regularizer = Truncated Normal Initializer with Weight = 0.001
-* Number of Epochs = 6
-* Batch Size = 8
-* Learning Rate = 0.0001
-* Loss Function = Cross-Entropy
-* Optimizer = Adam Optimizer
+* Tranposed Convolution Kernel Initializer : Truncated Normal Initializer with Standard Deviation = 0.01
+* Tranposed Convolution Kernel Regularizer : Truncated Normal Initializer with Weight = 0.001
+* Number of Epochs : 6
+* Batch Size : 8
+* Learning Rate : 0.0001
+* Loss Function : Cross-Entropy
+* Optimizer : Adam Optimizer
+
+The model has been trained on Amazon Web Services (AWS) EC2 using the g3.4xlarge GPU instance which is a single NVIDIA Tesla M60 GPU. Instructions for setting up the AWS spot instance can be found in the instructions_aws_setup.txt. 
 
 ## Result
 ---
