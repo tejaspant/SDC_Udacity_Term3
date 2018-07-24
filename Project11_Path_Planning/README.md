@@ -1,13 +1,14 @@
 ## Project: Path Planning 
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
-## Overview
----
-In this project, the goal is to design a path planner that is able to generate smooth and safe paths for an autonomous car to follow along a 3 lane highway with traffic
-
 [//]: # (Image References)
 
 [image1]: ./write_up_images/simulator.png "simulator"
+
+## Overview
+---
+In this project, the goal is to design a path planner that is able to generate smooth and safe paths for an autonomous car to follow along a 3 lane highway with traffic
+![alt text][image1]
 
 ## Dependencies
 ---
