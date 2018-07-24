@@ -26,6 +26,9 @@ In this project, the goal is to design a path planner that is able to generate s
 * Run Code: ./path_planning
 
 ## Approach
+---
+The initial approach considered was the use of finite state machine (FSM) with cost functions to determine the best possible next state of the car along with using the minimum jerk trajectory. However because of shortage of time, the spline approach for generating the trajectory as discussed the walkthrough has been implemented. Instead of using cost functions, the next state of the car is determined deterministically. 
+
 
 ## Result
 ---
@@ -34,6 +37,6 @@ Here is the [link](https://www.youtube.com/watch?v=RKndu2MFpvU) to a video showi
 ## Future Work
 ---
 There are a number of ways in which the current the path planner can be included like:
-* Using a Finite State Machine approach with cost functions to determine the best possible next state
+* Using a FSM approach with cost functions to determine the best possible next state
 * Use a multi-modal estimation algorithm for prediction of behavior of non-ego vehicles to make it more robust to even city driving conditions
 * Use the minimum jerk trajectory to determine the path
