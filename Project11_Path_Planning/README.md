@@ -27,8 +27,22 @@ In this project, the goal is to design a path planner that is able to generate s
 
 ## Approach
 ---
-The initial approach considered was the use of finite state machine (FSM) with cost functions to determine the best possible next state of the car along with using the minimum jerk trajectory. However because of shortage of time, the spline approach for generating the trajectory as discussed the walkthrough has been implemented. Instead of using cost functions, the next state of the car is determined deterministically. 
+The initial approach considered was the use of finite state machine (FSM) with cost functions to determine the best possible next state of the car along with using the minimum jerk trajectory. However because of shortage of time, the spline approach for generating the trajectory as discussed the walkthrough has been implemented. Instead of using cost functions, the next state of the car is determined deterministically. The bulk of the code is implmented in the main.cpp.
 
+#Sensor Fusion
+---
+Line 108-148
+Using the sensor fusion data, the path of the non-ego vehicles is predicted and it is determined whether there is a car in the current lane or the adjacent lanes
+
+#Behavior Planning
+---
+Line 149-172
+Based on the sensor fusion data, in the behavior planning section one of the next possible states of the car among, keep in lane, lane change left or lane change right is determined. Further imporvement can be made here by using cost functions to determine which state is more feasible based on the cost of each state.
+
+#Trajectory Generation
+---
+line 174-273
+Once the next state of the autonomous car is determined in the behavior planning section, a spline trajectory is generated using the [spline.h](http://kluge.in-chemnitz.de/opensource/spline/) header file. This approach of generating a trajectory is more straightforward in comparison to using the minimum jerk trajectory approach which requires the initial and final position, velocity and acceleration in both of the Frenet co-ordinates. 
 
 ## Result
 ---
