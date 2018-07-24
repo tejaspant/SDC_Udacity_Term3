@@ -53,4 +53,4 @@ Here is the [link](https://www.youtube.com/watch?v=RKndu2MFpvU) to a video showi
 There are a number of ways in which the current the path planner can be included like:
 * Using a FSM approach with cost functions to determine the best possible next state
 * Use a multi-modal estimation algorithm for prediction of behavior of non-ego vehicles to make it more robust to even city driving conditions
-* Use the minimum jerk trajectory to determine the path
+
