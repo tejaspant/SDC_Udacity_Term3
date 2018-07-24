@@ -31,17 +31,17 @@ The initial approach considered was the use of finite state machine (FSM) with c
 
 Sensor Fusion
 ---
-Line 108-148
+(Line 108-148)
 Using the sensor fusion data, the path of the non-ego vehicles is predicted and it is determined whether there is a car in the current lane or the adjacent lanes
 
 Behavior Planning
 ---
-Line 149-172
+(Line 149-172)
 Based on the sensor fusion data, in the behavior planning section one of the next possible states of the car among, keep in lane, lane change left or lane change right is determined. Further imporvement can be made here by using cost functions to determine which state is more feasible based on the cost of each state.
 
-#Trajectory Generation
+Trajectory Generation
 ---
-line 174-273
+(line 174-273)
 Once the next state of the autonomous car is determined in the behavior planning section, a spline trajectory is generated using the [spline.h](http://kluge.in-chemnitz.de/opensource/spline/) header file. This approach of generating a trajectory is more straightforward in comparison to using the minimum jerk trajectory approach which requires the initial and final position, velocity and acceleration in both of the Frenet co-ordinates. 
 
 ## Result
